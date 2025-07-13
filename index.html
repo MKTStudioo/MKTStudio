@@ -112,28 +112,31 @@
     <h2>Contacto</h2>
     <div class="botones-contacto">
       <a href="#" onclick="abrirCorreo()" class="btn-contacto" aria-label="Enviar email a MKTStudio">
-        📧 Email
-      </a>
-      <script>
-          function abrirCorreo() {
-              const destino = "webs.mkt.studio@gmail.com";
-          const asunto = "Consulta desde la web";
-          const cuerpo = "Hola MKTStudio, quiero más información.";
-      
-          const asuntoCodificado = encodeURIComponent(asunto);
-          const cuerpoCodificado = encodeURIComponent(cuerpo);
-      
-          const esMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      
-          if (esMobile) {
-            // En móvil: se usa mailto (abre la app de correo predeterminada, como Gmail)
-            window.location.href = `mailto:${destino}?subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
-          } else {
-            // En PC: abre Gmail directamente en el navegador
-            const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${destino}&su=${asuntoCodificado}&body=${cuerpoCodificado}`;
-            window.open(url, '_blank');
+    📧 Enviar correo
+  </a>
+
+  <!-- SCRIPT -->
+  <script>
+    function abrirCorreo() {
+      const destino = "webs.mkt.studio@gmail.com";
+      const asunto = "Consulta desde la web";
+      const cuerpo = "Hola MKTStudio, quiero más información sobre sus servicios.";
+
+      const asuntoCodificado = encodeURIComponent(asunto);
+      const cuerpoCodificado = encodeURIComponent(cuerpo);
+
+      const esMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (esMobile) {
+        // En móvil: abre la app de correo
+        window.location.href = `mailto:${destino}?subject=${asuntoCodificado}&body=${cuerpoCodificado}`;
+      } else {
+        // En escritorio: abre Gmail en navegador
+        const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${destino}&su=${asuntoCodificado}&body=${cuerpoCodificado}`;
+        window.open(url, '_blank');
+      }
     }
-  }
+  </script>
       <a href="https://instagram.com/Mkt.Webstudio" target="_blank" class="btn-contacto" aria-label="Visitar Instagram de MKTStudio">
         📸 Instagram
       </a>
