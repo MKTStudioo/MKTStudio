@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MKTStudio | Desarrollo Web & Publicidad Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+    <!-- Favicon para modo claro -->
+<link rel="icon" href="FAVICONBLANCO.png" type="image/png" media="(prefers-color-scheme: light)">
+
+<!-- Favicon para modo oscuro -->
+<link rel="icon" href="FAVICONNEGRO.png" type="image/png" media="(prefers-color-scheme: dark)">
+
+
+
+ 
+
+</head>
+<body>
+
+  <header id="header">
+    <div class="container">
+      <div class="logo">MKTStudio</div>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="container hero-content">
+      <h1 class="anim-texto">Impulsamos tu presencia digital<br /><span>con diseño y publicidad efectiva</span></h1>
+      <p class="anim-texto">Creación de sitios web modernos y campañas en Meta Ads que convierten.</p>
+      <a href="#contacto" class="btn-primary">Contáctanos</a>
+    </div>
+  </section>
+
+  <section id="servicios" class="servicios">
+    <div class="container">
+      <h2 class="anim-scroll" data-delay="0">Servicios</h2>
+      <div class="cards">
+        <article class="card anim-scroll" data-delay="0">
+          <svg class="icon" viewBox="0 0 64 64" >
+            <path d="M8 12h48v40H8z" stroke="#0A192F" stroke-width="3"/>
+            <path d="M8 24h48" stroke="#0A192F" stroke-width="3"/>
+            <circle cx="32" cy="44" r="4" fill="#64FFDA"/>
+          </svg>
+          <h3>Desarrollo Web</h3>
+          <p>Sitios responsivos, veloces y personalizados para tu negocio.</p>
+          <div class="boton-vermas">
+            <a href="desarrollo-web.html" class="btn-secondary">Ver más</a>
+          </div>
+        </article>
+        <article class="card anim-scroll" data-delay="1">
+          <svg class="icon" viewBox="0 0 64 64" >
+            <circle cx="32" cy="32" r="28" stroke="#0A192F" stroke-width="3"/>
+            <path d="M24 24l16 16M40 24L24 40" stroke="#64FFDA" stroke-width="3"/>
+          </svg>
+          <h3>Publicidad Meta Ads</h3>
+          <p>Campañas efectivas en Facebook e Instagram que generan ventas.</p>
+          <div class="boton-vermas">
+            <a href="meta-ads.html" class="btn-secondary">Ver más</a>
+          </div>
+        </article>
+        <article class="card anim-scroll" data-delay="2">
+          <svg class="icon" viewBox="0 0 64 64" >
+            <path d="M32 12a20 20 0 1 0 0 40 20 20 0 0 0 0-40z" stroke="#0A192F" stroke-width="3"/>
+            <path d="M20 32h24M32 20v24" stroke="#64FFDA" stroke-width="3"/>
+          </svg>
+          <h3>Optimización de Redes Sociales</h3>
+          <p>Mejoramos tu alcance y engagement con estrategias personalizadas.</p>
+          <div class="boton-vermas">
+            <a href="optimizacion-redes.html" class="btn-secondary">Ver más</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="proyectos">
+    <div class="container">
+      <h2>Proyectos Destacados</h2>
+      <ul class="lista-proyectos">
+        <li>
+          <h3>Tiendas Online a Medida</h3>
+          <p>Desarrollo de e-commerce responsivos con sistema de pagos integrado y gestión de productos.</p>
+        </li>
+        <li>
+          <h3>Campañas de Captación</h3>
+          <p>Landing pages enfocadas en generación de leads para marcas de café y servicios profesionales.</p>
+        </li>
+        <li>
+          <h3>Web Institucional</h3>
+          <p>Presencia corporativa moderna para consultoras y pequeñas empresas, con SEO básico incluido.</p>
+        </li>
+        <li>
+          <h3>Estrategia de Redes Sociales</h3>
+          <p>Optimización de perfiles e incremento de engagement a través de publicaciones y anuncios segmentados.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <div class="botones-contacto">
+      <a href="#" onclick="abrirCorreo()" class="btn-contacto" aria-label="Enviar email a MKTStudio">
+    📧 Enviar correo
+  </a>
+
+  <!-- SCRIPT -->
+  
+      <a href="https://instagram.com/Mkt.Webstudio" target="_blank" class="btn-contacto" aria-label="Visitar Instagram de MKTStudio">
+        📸 Instagram
+      </a>
+      <a href="https://wa.me/2216022914" target="_blank" class="btn-contacto" aria-label="Enviar mensaje por WhatsApp a MKTStudio">
+        📱 WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MKTStudio. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="button.js"></script>
+</body>
+</html>
