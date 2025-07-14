@@ -397,7 +397,7 @@ footer {
 
 /* Responsive */
 
-/* Forzar horizontal en desktop y arreglar menú */
+/* Forzar horizontal en desktop y esconder toggle */
 @media (min-width: 769px) {
   .nav-links {
     display: flex !important;
@@ -495,6 +495,4 @@ footer {
     display: block;
   }
 }
-
-
 
