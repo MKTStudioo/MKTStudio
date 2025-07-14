@@ -20,18 +20,17 @@ body {
   text-align: center;
 }
 
-/* Header */
-header {
+/* Header base */
+header#header {
   background: #0A192F;
-  position: relative; /* Importante para posicionar menú absoluto */
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-header .container {
+header#header .container {
   display: flex;
-  justify-content: space-between; /* Separar logo y menú en desktop */
+  justify-content: space-between; /* desktop: logo izquierda, menú derecha */
   align-items: center;
   height: 70px;
   padding: 0 20px;
@@ -44,11 +43,18 @@ header .container {
   color: #64FFDA;
 }
 
-/* NAVBAR */
+.menu-toggle {
+  display: none; /* oculto desktop */
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
 .nav-links {
   display: flex;
-  flex-direction: row; /* horizontal desktop */
+  flex-direction: row;
   gap: 30px;
   list-style: none;
 }
@@ -63,16 +69,6 @@ header .container {
 .nav-links li a:hover,
 .nav-links li a.active {
   color: #FFFFFF;
-}
-
-/* Botón menú hamburguesa */
-.menu-toggle {
-  display: none; /* oculto en desktop */
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
 }
 
 /* Hero */
@@ -397,122 +393,76 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 768px) {
 
-/* Forzar horizontal en desktop y esconder toggle */
+  /* Container navbar: solo botón centrado */
+  header#header .container {
+    justify-content: center;
+    position: relative;
+    height: 70px;
+  }
+
+  /* Ocultar logo */
+  .logo {
+    display: none;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 10001;
+  }
+
+  /* Menú desplegable */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #0A192F;
+    padding: 10px 0;
+    width: 100vw;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 10000;
+    box-sizing: border-box;
+  }
+
+  /* Menú activo */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Links menú */
+  .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+    border-top: 1px solid #146c68;
+  }
+
+  .nav-links li:first-child {
+    border-top: none;
+  }
+
+  .nav-links li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+}
+
+/* Forzar menú horizontal en desktop */
 @media (min-width: 769px) {
   .nav-links {
     display: flex !important;
     flex-direction: row !important;
   }
-
   .menu-toggle {
     display: none !important;
-  }
-}
-
-/* Móvil */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.3rem;
-  }
-
-  nav ul {
-    gap: 15px;
-  }
-
-  .cards {
-    flex-direction: column;
-  }
-
-  .card {
-    max-width: 100%;
-  }
-
-  .lista-proyectos {
-    max-width: 100%;
-  }
-
-  .lista-proyectos li {
-    max-width: 100%;
-  }
-
-  /* Ajustes para desarrollo web */
-  .detalle-servicio .container,
-  .proceso .container,
-  .llamada .container {
-    max-width: 100%;
-    padding: 0 10px;
-    text-align: left;
-  }
-
-  .grid-portafolio {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .llamada p {
-    font-size: 1rem;
-  }
-
-  footer {
-    font-size: 0.9rem;
-    padding: 15px 0;
-  }
-
-  /* NAVBAR MOBILE */
-  header .container {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
-
-    /* Centrar contenido (logo y menú toggle) */
-    display: flex;
-    justify-content: center; /* centra horizontalmente */
-    align-items: center;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Nav-links estilo menú desplegable móvil */
-  .nav-links {
-    position: absolute; /* para posicionarlo fuera del flujo */
-    top: 70px;          /* justo debajo del header */
-    right: 0;
-    left: 0;
-    background-color: #0A192F;
-    padding: 10px 0;
-    display: none;       /* oculto por defecto */
-    flex-direction: column;
-    width: 100vw;        /* ancho completo */
-    max-height: calc(100vh - 70px);
-    overflow-y: auto;
-    z-index: 9999;
-    box-sizing: border-box;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    width: 100%;
-    padding: 12px 0;
-    text-align: center;
-    border-top: 1px solid #146c68; /* línea separadora opcional */
-  }
-
-  .nav-links li:first-child {
-    border-top: none; /* quitar línea arriba del primer item */
-  }
-
-  .nav-links li a {
-    color: white;
-    display: block;
-    font-size: 1.2rem;
-    padding: 0 20px;
-    text-decoration: none;
   }
 }
 
