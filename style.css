@@ -14,10 +14,12 @@ body {
 }
 
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
 
 /* Header */
 header {
@@ -41,11 +43,10 @@ header .container {
   color: #64FFDA;
 }
 
-.logo a {
-  color: #64FFDA;
-  text-decoration: none;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
-
 nav ul {
   list-style: none;
   display: flex;
@@ -62,6 +63,31 @@ nav a {
 nav a:hover,
 nav a.active {
   color: #FFFFFF;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 /* Hero */
@@ -571,5 +597,23 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1e1e2f;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
 
 
