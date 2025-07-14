@@ -1,16 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-links");
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-  // Abrir/cerrar el menú
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-
-  // Cerrar el menú al hacer clic en un link
-  document.querySelectorAll("#nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("active");
-    });
-  });
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
 });
