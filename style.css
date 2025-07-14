@@ -66,6 +66,15 @@ nav a.active {
   color: #FFFFFF;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 /* Hero */
 .hero {
   background: linear-gradient(135deg, #64FFDA, #0A192F);
