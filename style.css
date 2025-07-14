@@ -43,9 +43,11 @@ header .container {
   color: #64FFDA;
 }
 
+/* NAVBAR */
+
 .nav-links {
   display: flex;
-  flex-direction: row; /* Menú horizontal en desktop */
+  flex-direction: row; /* horizontal desktop */
   gap: 30px;
   list-style: none;
 }
@@ -62,30 +64,9 @@ header .container {
   color: #FFFFFF;
 }
 
+/* Botón menú hamburguesa */
 .menu-toggle {
-  display: none; /* Oculto en desktop */
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-
-nav a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #64FFDA;
-  transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a.active {
-  color: #FFFFFF;
-}
-
-.menu-toggle {
-  display: none;
+  display: none; /* oculto en desktop */
   font-size: 28px;
   background: none;
   border: none;
@@ -415,6 +396,20 @@ footer {
 }
 
 /* Responsive */
+
+/* Forzar horizontal en desktop y arreglar menú */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+/* Móvil */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.3rem;
@@ -464,38 +459,6 @@ footer {
   }
 
   /* NAVBAR MOBILE */
-   header .container {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
-  }
-
-  .menu-toggle {
-    display: block;
-    align-self: flex-end;
-  }
-
- .nav-links {
-  display: flex;
-  flex-direction: row; /* horizontal desktop */
-  gap: 30px;
-  list-style: none;
-}
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .nav-links li a {
-    color: white;
-    display: block;
-  }
-
-  @media (max-width: 768px) {
   header .container {
     flex-direction: column;
     height: auto;
@@ -533,12 +496,5 @@ footer {
   }
 }
 
-/* Para forzar horizontal en desktop si hay conflicto */
-@media (min-width: 769px) {
-  .nav-links {
-    display: flex !important;
-    flex-direction: row !important;
-  }
-}
 
 
