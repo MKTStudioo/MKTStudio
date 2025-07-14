@@ -31,7 +31,7 @@ header {
 
 header .container {
   display: flex;
-  justify-content: space-between; /* Separar logo y menú */
+  justify-content: space-between; /* Separar logo y menú en desktop */
   align-items: center;
   height: 70px;
   padding: 0 20px;
@@ -464,14 +464,15 @@ footer {
     flex-direction: column;
     height: auto;
     padding: 10px 20px;
-     display: flex;
-    justify-content: center; /* Centra horizontalmente */
+
+    /* Centrar contenido (logo y menú toggle) */
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
     align-items: center;
   }
 
   .menu-toggle {
     display: block;
-    align-self: flex-end;
   }
 
   /* Nav-links estilo menú desplegable móvil */
@@ -514,4 +515,5 @@ footer {
     text-decoration: none;
   }
 }
+
 
