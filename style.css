@@ -65,26 +65,30 @@ nav a.active {
   color: #FFFFFF;
 }
 
+/* ESTILO BASE: escritorio (PC) */
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   list-style: none;
-  background-color: #0A192F;
+  background: none; /* sin fondo en PC */
+}
+
+.nav-links li {
+  background: none;
 }
 
 .nav-links li a {
-  color: white;
+  color: #64FFDA;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 600;
+  padding: 10px;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #00bcd4;
-} 
+  color: #FFFFFF;
+}
 
-.nav-links li {
-  background-color: #1e1e2f;
-} 
 
 .menu-toggle {
   display: none;
@@ -600,9 +604,6 @@ footer {
     font-size: 0.9rem;
     padding: 15px 0;
   }
-}
-
-@media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
@@ -620,5 +621,7 @@ footer {
     display: flex;
   }
 }
+
+
 
 
