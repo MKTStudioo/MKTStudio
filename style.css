@@ -11,7 +11,6 @@ body {
   background: #F5F5F5;
   color: #0A192F;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 .container {
@@ -58,10 +57,8 @@ header#header .container {
   flex-direction: row;
   gap: 30px;
   list-style: none;
-   transition: none !important;
-  left: 0 !important;
+  
 }
-
 
 .nav-links li a {
   color: #64FFDA;
@@ -107,37 +104,6 @@ header#header .container {
 
 .btn-primary:hover {
   background: #092032;
-}
-
-/* Botones de contacto estilo botón moderno */
-.btn-contacto {
-  background: linear-gradient(90deg, #64FFDA 60%, #0A192F 100%);
-  color: #0A192F;
-  font-weight: 700;
-  padding: 14px 32px;
-  border-radius: 32px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.15rem;
-  box-shadow: 0 2px 12px rgba(100,255,218,0.10);
-  border: none;
-  outline: none;
-  transition: background 0.3s, color 0.3s, transform 0.2s;
-  cursor: pointer;
-}
-
-.btn-contacto:hover,
-.btn-contacto:focus {
-  background: linear-gradient(90deg, #4ac8ad 60%, #0A192F 100%);
-  color: #fff;
-  transform: translateY(-2px) scale(1.04);
-}
-
-.icono-contacto {
-  font-size: 1.5rem;
-  margin-right: 4px;
 }
 
 /* Servicios, Proyectos, Contacto */
@@ -438,21 +404,15 @@ footer {
   }
 
   /* Ocultar logo */
- .logo-text-mobile {
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #64FFDA;
-    margin-bottom: 2px;
-    text-align: center;
-    width: 100%;
-  }
   .logo {
     display: none;
   }
+
+  /* Mostrar botón hamburguesa */
   .menu-toggle {
-    margin-top: 4px;
+    display: block;
+    position: relative;
+    z-index: 10001;
   }
 
   /* Menú desplegable */
@@ -494,49 +454,7 @@ footer {
     text-decoration: none;
   }
 
-  .botones-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    margin-bottom: 25px;
-  }
-
-  .btn-contacto {
-    width: 90vw;
-    max-width: 340px;
-    font-size: 1.1rem;
-    padding: 14px 0;
-    justify-content: center;
-    border-radius: 32px;
-    box-shadow: 0 2px 12px rgba(100,255,218,0.10);
-    background: linear-gradient(90deg, #64FFDA 60%, #0A192F 100%);
-    color: #0A192F;
-    font-weight: 700;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: none;
-    outline: none;
-    transition: background 0.3s, color 0.3s, transform 0.2s;
-    cursor: pointer;
-  }
-
-  .btn-contacto:hover,
-  .btn-contacto:focus {
-    background: linear-gradient(90deg, #4ac8ad 60%, #0A192F 100%);
-    color: #fff;
-    transform: translateY(-2px) scale(1.04);
-  }
-
-  .icono-contacto {
-    font-size: 1.5rem;
-    margin-right: 4px;
-  }
 }
-
-
 
 /* Forzar menú horizontal en desktop */
 @media (min-width: 769px) {
@@ -547,8 +465,4 @@ footer {
   .menu-toggle {
     display: none !important;
   }
-  
-}
-.logo-text-mobile {
-  display: none;
 }
