@@ -30,7 +30,7 @@ header {
 
 header .container {
   display: flex;
-  justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+  justify-content: space-between; /* Separar logo y menú */
   align-items: center;
   height: 70px;
   padding: 0 20px;
@@ -45,19 +45,32 @@ header .container {
 
 .nav-links {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Menú horizontal en desktop */
   gap: 30px;
   list-style: none;
 }
 
+.nav-links li a {
+  color: #64FFDA;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #FFFFFF;
+}
+
 .menu-toggle {
-  display: none;
+  display: none; /* Oculto en desktop */
   font-size: 28px;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
 }
+
 
 nav a {
   text-decoration: none;
