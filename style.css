@@ -48,7 +48,7 @@ header .container {
   text-decoration: none;
 }
 
-nav ul {
+nav .nav-links {
   list-style: none;
   display: flex;
   gap: 30px;
