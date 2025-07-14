@@ -587,6 +587,32 @@ footer {
     font-size: 0.9rem;
     padding: 15px 0;
   }
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0A192F;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links li a {
+    color: white;
+    display: block;
+  }
+}
 }
 
 
