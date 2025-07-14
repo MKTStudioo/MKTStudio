@@ -464,6 +464,9 @@ footer {
     flex-direction: column;
     height: auto;
     padding: 10px 20px;
+     display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
   }
 
   .menu-toggle {
