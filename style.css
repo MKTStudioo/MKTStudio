@@ -80,7 +80,11 @@ nav a.active {
 
 .nav-links li a:hover {
   color: #00bcd4;
-}
+} 
+
+.nav-links li {
+  background-color: #1e1e2f;
+} 
 
 .menu-toggle {
   display: none;
