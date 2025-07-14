@@ -75,7 +75,11 @@ nav a.active {
 }
 
 .hero-content h1 span {
-  color: #FFFFFF;
+  display: block; /* para que el span ocupe toda la línea */
+  margin-top: 0.5em; /* un poco de espacio arriba */
+  color: #FFFFFF; /* ya lo tenías */
+}
+.hero-content {
   text-align: center;
 }
 
