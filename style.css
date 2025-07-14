@@ -544,6 +544,8 @@ footer {
   }
   .logo {
     display: block !important;
+    margin-left: 0 !important; /* Asegura que no tenga margen izquierdo extra */
+    text-align: left !important; /* Alinea el texto a la izquierda */
   }
   .menu-toggle {
     display: none !important;
