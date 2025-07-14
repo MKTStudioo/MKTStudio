@@ -438,15 +438,21 @@ footer {
   }
 
   /* Ocultar logo */
+ .logo-text-mobile {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #64FFDA;
+    margin-bottom: 2px;
+    text-align: center;
+    width: 100%;
+  }
   .logo {
     display: none;
   }
-
-  /* Mostrar botón hamburguesa */
   .menu-toggle {
-    display: block;
-    position: relative;
-    z-index: 10001;
+    margin-top: 4px;
   }
 
   /* Menú desplegable */
@@ -542,4 +548,7 @@ footer {
     display: none !important;
   }
   
+}
+.logo-text-mobile {
+  display: none;
 }
