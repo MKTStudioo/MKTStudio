@@ -1,8 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
 
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
+  // Abrir/cerrar el menú
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  // Cerrar el menú al hacer clic en un link
+  document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
     });
   });
+});
