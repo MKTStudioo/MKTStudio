@@ -114,6 +114,44 @@ header#header .container {
 .hero-content {
   text-align: center;
 }
+/* Botones de contacto estilo botón moderno */
+.botones-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.btn-contacto {
+  background: linear-gradient(90deg, #64FFDA 60%, #0A192F 100%);
+  color: #0A192F;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 32px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 12px rgba(100,255,218,0.10);
+  border: none;
+  outline: none;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.btn-contacto:hover,
+.btn-contacto:focus {
+  background: linear-gradient(90deg, #4ac8ad 60%, #0A192F 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.icono-contacto {
+  font-size: 1.5rem;
+  margin-right: 4px;
+}
 
 /* Botones */
 .btn-primary {
@@ -476,6 +514,19 @@ footer {
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
+  }
+
+  .botones-contacto {
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+  }
+  .btn-contacto {
+    width: 90vw;
+    max-width: 340px;
+    justify-content: center;
+    padding: 14px 0;
+    font-size: 1.1rem;
   }
 }
 
