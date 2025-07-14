@@ -23,6 +23,7 @@ body {
 /* Header */
 header {
   background: #0A192F;
+  position: relative; /* Importante para posicionar menú absoluto */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -470,15 +471,21 @@ footer {
     align-self: flex-end;
   }
 
+  /* Nav-links estilo menú desplegable móvil */
   .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
+    position: absolute; /* para posicionarlo fuera del flujo */
+    top: 70px;          /* justo debajo del header */
+    right: 0;
+    left: 0;
     background-color: #0A192F;
-    margin-top: 10px;
     padding: 10px 0;
+    display: none;       /* oculto por defecto */
+    flex-direction: column;
+    width: 100vw;        /* ancho completo */
     max-height: calc(100vh - 70px);
     overflow-y: auto;
+    z-index: 9999;
+    box-sizing: border-box;
   }
 
   .nav-links.active {
@@ -486,13 +493,22 @@ footer {
   }
 
   .nav-links li {
+    width: 100%;
+    padding: 12px 0;
     text-align: center;
-    padding: 10px 0;
+    border-top: 1px solid #146c68; /* línea separadora opcional */
+  }
+
+  .nav-links li:first-child {
+    border-top: none; /* quitar línea arriba del primer item */
   }
 
   .nav-links li a {
     color: white;
     display: block;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    text-decoration: none;
   }
 }
 
