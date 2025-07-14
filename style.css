@@ -451,8 +451,15 @@ footer {
   }
 
   /* NAVBAR MOBILE */
+   header .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
   .menu-toggle {
     display: block;
+    align-self: flex-end;
   }
 
   .nav-links {
@@ -477,7 +484,6 @@ footer {
     color: white;
     display: block;
   }
-}
 
 
 
