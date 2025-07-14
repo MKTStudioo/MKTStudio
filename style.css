@@ -66,6 +66,13 @@ nav a.active {
   color: #FFFFFF;
 }
 
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+}
+
 .menu-toggle {
   display: none;
   font-size: 28px;
