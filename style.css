@@ -70,11 +70,11 @@ nav a.active {
   display: flex;
   gap: 30px;
   list-style: none;
-  background: none; /* sin fondo en PC */
+  background: none;
 }
 
 .nav-links li {
-  background: none;
+  background: none; /* ✅ limpio en PC */
 }
 
 .nav-links li a {
@@ -608,18 +608,29 @@ footer {
     display: block;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #0A192F;;
-    margin-top: 10px;
-    padding: 10px 0;
-  }
+ .nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #0A192F;
+  margin-top: 10px;
+  padding: 10px 0;
+}
 
-  .nav-links.active {
-    display: flex;
-  }
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links li {
+  background-color: #1e1e2f; /* solo en móvil */
+  text-align: center;
+}
+
+.nav-links li a {
+  color: white;
+  display: block;
+  padding: 15px 0;
+}
 }
 
 
