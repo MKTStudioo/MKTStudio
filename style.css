@@ -74,6 +74,11 @@ nav a.active {
 
 .hero-content h1 span {
   color: #FFFFFF;
+  text-align: center;
+}
+
+.hero h1 {
+   text-align: center;
 }
 
 .btn-primary {
