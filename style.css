@@ -495,5 +495,50 @@ footer {
     display: block;
   }
 
+  @media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0A192F;
+    margin-top: 10px;
+    padding: 10px 0;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links li a {
+    color: white;
+    display: block;
+  }
+}
+
+/* Para forzar horizontal en desktop si hay conflicto */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+}
 
 
